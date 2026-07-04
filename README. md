@@ -1,14 +1,57 @@
-# Lanka Auto Price Tracker (Chrome Extension)
+# 🚗 Lanka Auto Price Tracker
 
-A lightweight Google Chrome extension built with Manifest V3 that dynamically tracks and logs vehicle price histories across major Sri Lankan automobile marketplaces.
+A powerful, lightweight Google Chrome extension built with **Manifest V3** that dynamically tracks, logs, and displays vehicle price histories across major Sri Lankan automobile marketplaces[cite: 9].
 
-## Features
-- **Multi-platform Support:** Works seamlessly on Ikman.lk, Riyasewana.com, Patpat.lk, and Autolanka.com.
-- **Dynamic Price Scraping:** Automatically detects and extracts titles and listing prices.
-- **Real-time Price History:** Fetches and stores updates using a Firebase Realtime Database backend.
-- **Interactive UI:** Injects a sleek, dark-mode-ready floating card overlay on product pages, and features an extension toolbar popup.
+---
 
-## Tech Stack
-- JavaScript (DOM Manipulation, Chrome Extension API)
-- HTML5 & CSS3 (Custom responsive UI components)
-- Firebase Realtime Database
+## 🌟 Key Features
+
+* **📦 Multi-Platform Support:** Works seamlessly on [Ikman.lk](https://ikman.lk), [Riyasewana.com](https://riyasewana.com), [Patpat.lk](https://patpat.lk), and [Autolanka.com](https://autolanka.com)[cite: 9].
+* **🤖 Smart Price Scraping:** Automatically detects and extracts vehicle titles and listing prices directly from the DOM using site-specific selectors and regex patterns[cite: 8].
+* **⚡ Real-time Price History:** Instantly fetches and syncs price modifications using a central **Firebase Realtime Database** backend[cite: 8, 11].
+* **🎨 Seamless UI Overlays:** Injects a modern, dark-mode-ready floating card component directly onto product pages and includes a clean browser toolbar popup[cite: 8, 10].
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** JavaScript (ES6+, DOM Manipulation, Chrome Extension APIs)[cite: 8, 11]
+* **UI Styling:** HTML5 & CSS3 (Custom responsive overlays with dark mode variables)[cite: 8, 10]
+* **Backend Storage:** Firebase Realtime Database[cite: 8, 11]
+
+---
+
+## 📂 Project Structure
+
+```text
+lanka-auto-price-tracker/
+├── manifest.json       # Extension configuration & permissions
+├── content.js         # DOM scraping & floating UI injection
+├── popup.html         # Toolbar popup layout
+├── popup.js           # Popup logic & Firebase database integration
+└── icons/             # Extension brand assets
+
+
+---
+
+## 🚀 Installation & Setup
+
+### Step 1: Clone the Repository
+Open your terminal and run the following command to clone this project to your local machine:
+```bash
+git clone [https://github.com/KaweeshaMadushan/Lanka-Auto-Price-Tracker.git](https://github.com/KaweeshaMadushan/Lanka-Auto-Price-Tracker.git)
+```
+
+### Step 2: Load the Extension into Google Chrome
+1. Open Google Chrome and navigate to `chrome://extensions/` by typing it in the address bar.
+2. In the top-right corner, toggle the **Developer mode** switch to **ON**.
+3. In the top-left corner, click the **Load unpacked** button.
+4. Select the root folder of this project (the folder containing the `manifest.json` file).
+
+### Step 3: Database Configuration
+1. Go to your Firebase Console and set up a Realtime Database.
+2. Open `content.js` and `popup.js` in your code editor.
+3. Locate the `FIREBASE_DB_URL` variable and replace its value with your own Firebase Realtime Database reference URL:
+```javascript
+const FIREBASE_DB_URL = 'YOUR_FIREBASE_DATABASE_URL_HERE';
+```
