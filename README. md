@@ -1,23 +1,31 @@
 # 🚗 Lanka Auto Price Tracker
 
-A powerful, lightweight Google Chrome extension built with **Manifest V3** that dynamically tracks, logs, and displays vehicle price histories across major Sri Lankan automobile marketplaces[cite: 9].
+A powerful, lightweight Google Chrome extension built with **Manifest V3** that dynamically tracks, logs, and displays vehicle price histories across major Sri Lankan automobile marketplaces.
+
+![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Manifest V3](https://img.shields.io/badge/Manifest-V3-orange?style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black)
+![Firebase](https://img.shields.io/badge/Firebase-Realtime_DB-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+An elite, high-performance automobile price tracking application. Built securely to allow users to monitor vehicle listings dynamically and view real-time historical fluctuations directly on the product page.
 
 ---
 
 ## 🌟 Key Features
 
-* **📦 Multi-Platform Support:** Works seamlessly on [Ikman.lk](https://ikman.lk), [Riyasewana.com](https://riyasewana.com), [Patpat.lk](https://patpat.lk), and [Autolanka.com](https://autolanka.com)[cite: 9].
-* **🤖 Smart Price Scraping:** Automatically detects and extracts vehicle titles and listing prices directly from the DOM using site-specific selectors and regex patterns[cite: 8].
-* **⚡ Real-time Price History:** Instantly fetches and syncs price modifications using a central **Firebase Realtime Database** backend[cite: 8, 11].
-* **🎨 Seamless UI Overlays:** Injects a modern, dark-mode-ready floating card component directly onto product pages and includes a clean browser toolbar popup[cite: 8, 10].
+* **📦 Multi-Platform Support:** Works seamlessly on [Ikman.lk](https://ikman.lk), [Riyasewana.com](https://riyasewana.com), [Patpat.lk](https://patpat.lk), and [Autolanka.com](https://autolanka.com).
+* **🤖 Smart Price Scraping:** Automatically detects and extracts vehicle titles and listing prices directly from the DOM using site-specific selectors and regex patterns.
+* **⚡ Real-time Price History:** Instantly fetches and syncs price modifications using a central **Firebase Realtime Database** backend.
+* **🎨 Seamless UI Overlays:** Injects a modern, dark-mode-ready floating card component directly onto product pages and includes a clean browser toolbar popup.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** JavaScript (ES6+, DOM Manipulation, Chrome Extension APIs)[cite: 8, 11]
-* **UI Styling:** HTML5 & CSS3 (Custom responsive overlays with dark mode variables)[cite: 8, 10]
-* **Backend Storage:** Firebase Realtime Database[cite: 8, 11]
+* **Frontend:** JavaScript (ES6+, DOM Manipulation, Chrome Extension APIs)
+* **UI Styling:** HTML5 & CSS3 (Custom responsive overlays with dark mode variables)
+* **Backend Storage:** Firebase Realtime Database
 
 ---
 
@@ -26,11 +34,11 @@ A powerful, lightweight Google Chrome extension built with **Manifest V3** that 
 ```text
 lanka-auto-price-tracker/
 ├── manifest.json       # Extension configuration & permissions
-├── content.js         # DOM scraping & floating UI injection
-├── popup.html         # Toolbar popup layout
-├── popup.js           # Popup logic & Firebase database integration
-└── icons/             # Extension brand assets
-
+├── content.js          # DOM scraping & floating UI injection
+├── popup.html          # Toolbar popup layout
+├── popup.js            # Popup logic & Firebase database integration
+└── icons/              # Extension brand assets
+```
 
 ---
 
