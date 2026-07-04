@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Lanka Auto Price Tracker",
+  "version": "1.0",
+  "description": "Track vehicle prices across Sri Lankan auto marketplaces",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.riyasewana.com/*",
+    "*://ikman.lk/*",
+    "*://www.ikman.lk/*",
+    "*://*.patpat.lk/*",
+    "*://*.autolanka.com/*",
+    "https://price-tracker-947bd-default-rtdb.firebaseio.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Price Tracker"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://riyasewana.com/buy/*",
+        "*://www.riyasewana.com/buy/*",
+        "*://ikman.lk/*",
+        "*://www.ikman.lk/*",
+        "*://*.patpat.lk/*",
+        "*://*.autolanka.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

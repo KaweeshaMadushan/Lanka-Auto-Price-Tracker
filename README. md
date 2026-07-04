@@ -1,0 +1,14 @@
+# Lanka Auto Price Tracker (Chrome Extension)
+
+A lightweight Google Chrome extension built with Manifest V3 that dynamically tracks and logs vehicle price histories across major Sri Lankan automobile marketplaces.
+
+## Features
+- **Multi-platform Support:** Works seamlessly on Ikman.lk, Riyasewana.com, Patpat.lk, and Autolanka.com.
+- **Dynamic Price Scraping:** Automatically detects and extracts titles and listing prices.
+- **Real-time Price History:** Fetches and stores updates using a Firebase Realtime Database backend.
+- **Interactive UI:** Injects a sleek, dark-mode-ready floating card overlay on product pages, and features an extension toolbar popup.
+
+## Tech Stack
+- JavaScript (DOM Manipulation, Chrome Extension API)
+- HTML5 & CSS3 (Custom responsive UI components)
+- Firebase Realtime Database

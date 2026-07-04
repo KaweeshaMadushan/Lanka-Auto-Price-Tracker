@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --primary-color: #10b981;
+      --bg-color: #f3f4f6;
+      --text-color: #1f2937;
+      --surface-color: #ffffff;
+      --muted-text: #6b7280;
+      --border-color: #e5e7eb;
+      --chip-bg: #f9fafb;
+      --summary-bg: #f3f4f6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #111827;
+        --text-color: #f3f4f6;
+        --surface-color: #1f2937;
+        --muted-text: #9ca3af;
+        --border-color: #374151;
+        --chip-bg: #111827;
+        --summary-bg: #111827;
+      }
+    }
+
+    body {
+      width: 400px;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    .header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 16px 20px;
+      text-align: center;
+      margin: 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 16px;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    #priceHistory {
+      background-color: var(--surface-color);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .history-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--primary-color);
+      padding: 16px 16px 8px;
+    }
+
+    .vehicle-title {
+      font-size: 13px;
+      color: var(--text-color);
+      margin: 0 16px 12px;
+      padding: 10px 12px;
+      background-color: var(--chip-bg);
+      border-left: 3px solid var(--primary-color);
+      border-radius: 8px;
+    }
+
+    .price-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .price-entry {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 13px;
+      transition: background-color 0.2s ease;
+    }
+
+    .price-entry:hover {
+      background-color: var(--chip-bg);
+    }
+
+    .price-entry:last-child {
+      border-bottom: none;
+    }
+
+    .date {
+      font-weight: 600;
+      color: var(--muted-text);
+    }
+
+    .price {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .history-summary {
+      margin: 12px 16px 16px;
+      padding: 10px 12px;
+      background-color: var(--summary-bg);
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--muted-text);
+      text-align: center;
+    }
+
+    .message {
+      text-align: center;
+      padding: 20px 16px;
+      color: var(--muted-text);
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>✓ Price Tracker</h1>
+  </div>
+  <div class="container">
+    <div id="priceHistory">
+      <div class="message">Loading price history...</div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
