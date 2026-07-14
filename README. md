@@ -1,14 +1,14 @@
 # 🚗 Lanka Auto Price Tracker
 
-A powerful, lightweight Google Chrome extension built with **Manifest V3** that dynamically tracks, logs, and displays vehicle price histories across major Sri Lankan automobile marketplaces.
+<p align="center">
+  <img src="https://img.shields.io/badge/Chrome-Extension-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome Extension" />
+  <img src="https://img.shields.io/badge/Manifest-V3-orange?style=for-the-badge" alt="Manifest V3" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Firebase-Realtime_DB-ffca28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+</p>
 
-![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?style=for-the-badge&logo=googlechrome&logoColor=white)
-![Manifest V3](https://img.shields.io/badge/Manifest-V3-orange?style=for-the-badge)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black)
-![Firebase](https://img.shields.io/badge/Firebase-Realtime_DB-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
-![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-An elite, high-performance automobile price tracking application. Built securely to allow users to monitor vehicle listings dynamically and view real-time historical fluctuations directly on the product page.
+An elite, high-performance automobile price tracking application built with **Manifest V3**. It dynamically tracks, logs, and displays vehicle price histories across major Sri Lankan automobile marketplaces in real-time, directly on the product page.
 
 ---
 
@@ -17,7 +17,7 @@ An elite, high-performance automobile price tracking application. Built securely
 * **📦 Multi-Platform Support:** Works seamlessly on [Ikman.lk](https://ikman.lk), [Riyasewana.com](https://riyasewana.com), [Patpat.lk](https://patpat.lk), and [Autolanka.com](https://autolanka.com).
 * **🤖 Smart Price Scraping:** Automatically detects and extracts vehicle titles and listing prices directly from the DOM using site-specific selectors and regex patterns.
 * **⚡ Real-time Price History:** Instantly fetches and syncs price modifications using a central **Firebase Realtime Database** backend.
-* **🎨 Seamless UI Overlays:** Injects a modern, dark-mode-ready floating card component directly onto product pages and includes a clean browser toolbar popup.
+* **🎨 Seamless UI Overlays:** Injects a modern, dark-mode-ready floating card component directly onto product pages, plus a clean browser toolbar popup.
 
 ---
 
@@ -44,22 +44,27 @@ lanka-auto-price-tracker/
 
 ## 🚀 Installation & Setup
 
-### Step 1: Clone the Repository
-Open your terminal and run the following command to clone this project to your local machine:
+Follow these simple steps to get the extension up and running on your local machine:
+
 ```bash
+# Step 1: Clone the Repository
 git clone [https://github.com/KaweeshaMadushan/Lanka-Auto-Price-Tracker.git](https://github.com/KaweeshaMadushan/Lanka-Auto-Price-Tracker.git)
+
+# Step 2: Load the Extension into Google Chrome
+# 1. Open Google Chrome and navigate to: chrome://extensions/
+# 2. In the top-right corner, toggle 'Developer mode' to ON.
+# 3. Click the 'Load unpacked' button in the top-left.
+# 4. Select the root folder of this project (where manifest.json is located).
+
+# Step 3: Database Configuration
+# 1. Go to your Firebase Console and set up a Realtime Database.
+# 2. Open 'content.js' and 'popup.js' in your code editor.
+# 3. Replace 'YOUR_FIREBASE_DATABASE_URL_HERE' with your database URL:
+#    const FIREBASE_DB_URL = '[https://your-project-id.firebaseio.com/](https://your-project-id.firebaseio.com/)';
 ```
 
-### Step 2: Load the Extension into Google Chrome
-1. Open Google Chrome and navigate to `chrome://extensions/` by typing it in the address bar.
-2. In the top-right corner, toggle the **Developer mode** switch to **ON**.
-3. In the top-left corner, click the **Load unpacked** button.
-4. Select the root folder of this project (the folder containing the `manifest.json` file).
+---
 
-### Step 3: Database Configuration
-1. Go to your Firebase Console and set up a Realtime Database.
-2. Open `content.js` and `popup.js` in your code editor.
-3. Locate the `FIREBASE_DB_URL` variable and replace its value with your own Firebase Realtime Database reference URL:
-```javascript
-const FIREBASE_DB_URL = 'YOUR_FIREBASE_DATABASE_URL_HERE';
-```
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
